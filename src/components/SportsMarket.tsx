@@ -3,12 +3,12 @@ import { useQuery } from "react-query";
 import { fetchmarketData } from "../market-services/marketOutcome.service";
 import SportsEventContainer from "./SportsEventContainer";
 import {
-  Marketoutcome,
+  MarketOutcome,
   SportsDto,
 } from "../MarketDataTypes/marketOutcome.type";
 import { useAppDispatch } from "./store/hooks";
 import useBetItemSelect from "../hooks/useBetItemSelect";
-import { removeSelection, addToSelection } from "./store/outcomeSelecterSlice";
+import { removeSelection, addToSelection } from "./store/outcomeSelectorSlice";
 
 const SportsMarket = () => {
   const querykey = ["marketOutcomes"];
@@ -18,7 +18,7 @@ const SportsMarket = () => {
   useBetItemSelect();
 
   const onSelectoutcome = useCallback(
-    (outcome: Marketoutcome, isSelected: boolean) => {
+    (outcome: MarketOutcome, isSelected: boolean) => {
       if (isSelected) {
         dispatch(removeSelection(outcome.outcome_id));
       } else {

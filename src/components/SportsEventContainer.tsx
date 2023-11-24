@@ -1,11 +1,11 @@
 import React from "react";
-import { EventDto, Marketoutcome } from "../MarketDataTypes/marketOutcome.type";
+import { EventDto, MarketOutcome } from "../MarketDataTypes/marketOutcome.type";
 import SportsMarketContent from "./SportsMarketContent";
 
 interface SportsEventCOntainerPropType {
   sportName: string;
   events: Array<EventDto>;
-  onSelectoutcome: (outcome: Marketoutcome, isSelected: boolean) => void;
+  onSelectoutcome: (outcome: MarketOutcome, isSelected: boolean) => void;
 }
 
 const SportsEventContainer = (props: SportsEventCOntainerPropType) => {

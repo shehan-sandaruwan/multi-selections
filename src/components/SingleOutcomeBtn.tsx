@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Marketoutcome } from "../MarketDataTypes/marketOutcome.type";
+import { MarketOutcome } from "../MarketDataTypes/marketOutcome.type";
 import { useAppSelector } from "./store/hooks";
 
 interface SingleOutcomeBtnPropType {
-  outcome: Marketoutcome;
-  onSelectoutcome: (outcome: Marketoutcome, isSelected: boolean) => void;
+  outcome: MarketOutcome;
+  onSelectoutcome: (outcome: MarketOutcome, isSelected: boolean) => void;
 }
 
 const SingleOutcomeBtn = (props: SingleOutcomeBtnPropType) => {
@@ -34,6 +34,7 @@ const SingleOutcomeBtn = (props: SingleOutcomeBtnPropType) => {
     <div
       onClick={onbetButtonClick}
       className={`outcome-btn ${isSelected ? "active" : ""}`}
+      data-testid={`${outcome.outcome_name}-${outcome.outcome_id}`}
     >
       <label>{outcome.outcome_name}</label>
       <label>{outcome.odds}</label>

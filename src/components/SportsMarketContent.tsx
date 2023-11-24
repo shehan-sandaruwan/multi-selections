@@ -2,12 +2,12 @@ import React from "react";
 import SingleOutcomeContent from "./SingleOutcomeContent";
 import {
   MarketDto,
-  Marketoutcome,
+  MarketOutcome,
 } from "../MarketDataTypes/marketOutcome.type";
 
 interface SportsMarketContentPropsType {
   markets: Array<MarketDto>;
-  onSelectoutcome: (outcome: Marketoutcome, isSelected: boolean) => void;
+  onSelectoutcome: (outcome: MarketOutcome, isSelected: boolean) => void;
 }
 
 const SportsMarketContent = (props: SportsMarketContentPropsType) => {

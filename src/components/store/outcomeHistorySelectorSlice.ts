@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
-import { Marketoutcome } from "../../MarketDataTypes/marketOutcome.type";
+import { MarketOutcome } from "../../MarketDataTypes/marketOutcome.type";
 
 type SelectionHistoryObjectType = {
   state: string;
   queryKey: string;
-  selection: Array<Marketoutcome>;
+  selection: Array<MarketOutcome>;
 };
 
 interface selectionsHistoryState {
@@ -18,7 +18,7 @@ const initialState: selectionsHistoryState = {
 
 type AddItemType = {
   queryKey: string;
-  selection: Array<Marketoutcome>;
+  selection: Array<MarketOutcome>;
 };
 
 export const outcomeHistorySelectorSlice = createSlice({

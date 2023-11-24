@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import outcomeHistorySelecterSlice from "./outcomeHistorySelecterSlice";
-import outcomeSelecterSlice from "./outcomeSelecterSlice";
+import outcomeHistorySelecterSlice from "./outcomeHistorySelectorSlice";
+import outcomeSelecterSlice from "./outcomeSelectorSlice";
 // ...
 
 const store = configureStore({

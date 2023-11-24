@@ -1,4 +1,4 @@
-export interface Marketoutcome {
+export interface MarketOutcome {
   outcome_id: string;
   odds: number;
   outcome_name: string;
@@ -7,7 +7,7 @@ export interface Marketoutcome {
 export interface MarketDto {
   market_id: string;
   marketName: string;
-  outcomes: Array<Marketoutcome>;
+  outcomes: Array<MarketOutcome>;
 }
 
 export interface EventDto {

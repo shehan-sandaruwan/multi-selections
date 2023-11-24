@@ -1,11 +1,11 @@
 import React from "react";
-import { Marketoutcome } from "../MarketDataTypes/marketOutcome.type";
+import { MarketOutcome } from "../MarketDataTypes/marketOutcome.type";
 import SingleOutcomeBtn from "./SingleOutcomeBtn";
 
 interface SingleOutcmePropTypes {
-  outcomes: Array<Marketoutcome> | [];
+  outcomes: Array<MarketOutcome> | [];
   marketName: string;
-  onSelectoutcome: (outcome: Marketoutcome, isSelected: boolean) => void;
+  onSelectoutcome: (outcome: MarketOutcome, isSelected: boolean) => void;
 }
 
 const SingleOutcomeContent = (props: SingleOutcmePropTypes) => {
