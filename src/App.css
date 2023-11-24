@@ -1,38 +1,62 @@
-.App {
+:root {
+  --scale: 1.2;
+  --xlg: calc(var(--lg) * var(--scale));
+  --lg: calc(var(--h1) * var(--scale));
+  --h1: calc(var(--h2) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h3: calc(var(--h4) * var(--scale));
+  --h4: calc(var(--h5) * var(--scale));
+  --h5: calc(var(--h6) * var(--scale));
+  --h6: calc(1rem * var(--scale));
+  --small: calc(1rem / var(--scale));
+  --xsmall: calc(1rem / var(--small));
+}
+
+.sports-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--h4);
+  gap: var(--h5);
+}
+
+.outcomes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--h6);
+  flex: 1 1 auto;
+}
+
+.outcome-btn {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: var(--h6);
+  text-align: center;
+  border: 1px solid #333333;
+  border-radius: var(--h6);
+}
+
+.outcome-btn label:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 80px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.outcome-btn.active {
+  background-color: blueviolet;
+  color: #ffff;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.event-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  gap: 1rem;
+  background-color: aliceblue;
 }
